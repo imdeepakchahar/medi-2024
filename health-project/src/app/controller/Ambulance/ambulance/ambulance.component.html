@@ -3,11 +3,7 @@
 <div id="slider" class="carousel" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img
-        [src]="['./assets/images/ambulance-banner.jpg']"
-        alt=""
-        class="d-block"
-      />
+      <img [src]="['./assets/images/ambulance-banner.jpg']" alt="" class="d-block" />
     </div>
   </div>
   <div class="banner-search">
@@ -15,7 +11,8 @@
       <div class="col-md-6 col-sm-6 col-12">
         <h1>Get Ambulance Services</h1>
         <div class="col-md-12 col-sm-12 col-12 mt-4 mt-sm-1">
-          <p class="text-dark fs-6">Topmedz.com Provide your privilege to book ambulance online as per your requirement. To book ambulance is easy and convenient.  You have to follow few step only. </p>
+          <p class="text-dark fs-6">Topmedz.com Provide your privilege to book ambulance online as per your requirement.
+            To book ambulance is easy and convenient. You have to follow few step only. </p>
           <!-- <a
             href="javascript:void(0)"
             class="btn btn-danger border-2 rounded-pill"
@@ -23,11 +20,8 @@
             <i class="fas fa-phone-square"></i>
             858-593-0186
           </a> -->
-          <a
-            [routerLink]="['/ambulance/list']"
-            class="btn btn-success border-2 rounded-pill"
-          >
-            Find Ambulances 
+          <a [routerLink]="['/ambulance/list']" class="btn btn-success border-2 rounded-pill">
+            Find Ambulances
           </a>
         </div>
       </div>
@@ -35,11 +29,11 @@
   </div>
 </div>
 <!-- slider section end -->
-<section class="banner-bottom-section">
+<section class="banner-bottom-section py-3 ">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-6">
-        <div class="banner-bottom-box">
+      <div class="col-md-3 col-sm-3 col-6 ">
+        <div class="banner-bottom-box text-center">
           <a href="javascript:void(0)">
             <span>
               <img [src]="['./assets/images/icon/heartbeat.png']" alt="" />
@@ -52,14 +46,11 @@
           </a>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3 col-6">
-        <div class="banner-bottom-box">
+      <div class="col-md-3 col-sm-3 col-6 ">
+        <div class="banner-bottom-box text-center">
           <a href="javascript:void(0)">
             <span>
-              <img
-                [src]="['./assets/images/icon/healthcare-icon.png']"
-                alt=""
-              />
+              <img [src]="['./assets/images/icon/healthcare-icon.png']" alt="" />
             </span>
             <h6>For Healthcare</h6>
             <p>
@@ -69,8 +60,8 @@
           </a>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3 col-6">
-        <div class="banner-bottom-box">
+      <div class="col-md-3 col-sm-3 col-6 ">
+        <div class="banner-bottom-box text-center">
           <a href="javascript:void(0)">
             <span>
               <img [src]="['./assets/images/icon/emergency-call.png']" alt="" />
@@ -83,8 +74,8 @@
           </a>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3 col-6">
-        <div class="banner-bottom-box">
+      <div class="col-md-3 col-sm-3 col-6 ">
+        <div class="banner-bottom-box text-center">
           <a href="javascript:void(0)">
             <span>
               <img [src]="['./assets/images/icon/ambulance.png']" alt="" />
@@ -101,7 +92,87 @@
   </div>
 </section>
 
-<section class="about-ambulance-section">
+<!-- new-ambulance-type-section -->
+<section>
+  <h1 class="text-center my-sm-4"> Ambulance Available</h1>
+  <div class="container d-flex flex-wrap justify-content-around">
+    <div class=" p-sm-3 p-1 col-sm-4 col-12 d-flex flex-column">
+      <div class=" h-100 d-flex flex-column  border p-2 rounded shadow">
+        <div class="col-12 d-flex flex-column">
+          <img [src]="['./assets/images/Ambu4.png']" class="rounded" alt="">
+        </div>
+        <div class="col-12  p-3">
+          <h3 class="text-monospace fw-bold">Basic Life Support Ambulances</h3>
+          <p>Equipped with essential medical gear and trained staff, these ambulances stabilize patients and
+            offer basic care on-site, mainly for non-life-threatening situations, aiding in initial
+            assessment and safe transportation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class=" p-sm-3 p-1 col-sm-4 col-12 d-flex flex-column">
+      <div class=" h-100 d-flex flex-column  border p-2 rounded shadow">
+        <div class="col-12 d-flex flex-column">
+          <img [src]="['./assets/images/Ambu3.png']" class="rounded" alt="">
+        </div>
+        <div class="col-12  p-3">
+          <h3 class="text-monospace fw-bold">Advanced Life Support Ambulances</h3>
+          <p>Staffed by highly trained medical professionals and equipped with advanced gear, they administer
+            medications, manage airways, monitor vital signs, and provide cardiac support for critical
+            emergencies requiring immediate intervention.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class=" p-sm-3 p-1 col-sm-4 col-12 d-flex flex-column">
+      <div class=" h-100 d-flex flex-column  border p-2 rounded shadow">
+        <div class="col-12 d-flex flex-column">
+          <img [src]="['./assets/images/Ambu5.png']" class="rounded" alt="">
+        </div>
+        <div class="col-12  p-3">
+          <h3 class="text-monospace fw-bold">Air Ambulances</h3>
+          <p>Rapidly transport critically ill or injured patients over long distances using helicopters or
+            planes, equipped with advanced medical gear and specialized teams, crucial in remote or
+            accident-prone areas, reducing travel time to medical facilities.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class=" p-sm-3 p-1 col-sm-4 col-12 d-flex flex-column">
+      <div class=" h-100 d-flex flex-column  border p-2 rounded shadow">
+        <div class="col-12 d-flex flex-column">
+          <img [src]="['./assets/images/Ambu1.png']" class="rounded" alt="">
+        </div>
+        <div class="col-12  p-3">
+          <h3 class="text-monospace fw-bold">E-Rickshaw Ambulances</h3>
+          <p>Compact and agile, these vehicles equipped with basic medical gear navigate narrow urban areas
+            swiftly, reaching congested or inaccessible locations efficiently, providing prompt medical aid
+            and transportation to nearby medical facilities.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class=" p-sm-3 p-1 col-sm-4 col-12 d-flex flex-column">
+      <div class=" h-100 d-flex flex-column  border p-2 rounded shadow">
+        <div class="col-12 d-flex flex-column">
+          <img [src]="['./assets/images/Ambu2.png']" class="rounded" alt="">
+        </div>
+        <div class="col-12  p-3">
+          <h3 class="text-monospace fw-bold">Dead Body Ambulances</h3>
+          <p>Also known as mortuary vans, these vehicles transport deceased individuals with dignity,
+            preserving and ensuring compliance with cultural and legal standards, facilitating respectful
+            transportation to mortuaries or funeral homes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- new-ambulance-type-section -->
+
+
+<!-- <section class="about-ambulance-section">
   <div class="container">
     <h3 class="heading py-3">
       We are Spaclized in Emergency Air Abulance And Non-Emergency Ground
@@ -192,9 +263,9 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="Key-features-call">
+<!-- <section class="Key-features-call">
   <div class="container">
     <h3 class="heading text-center">Key features of our Ambulance service</h3>
     <p class="text-center">Unique Features of Our Ambulance Services</p>
@@ -240,7 +311,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section class="ambulace-madical-call">
   <div class="container">
     <div class="row">
@@ -248,8 +319,9 @@
         <div class="">
           <h5 class="fs-4 fw-semibold">For All Your Emergency & non-Emergency medical needs</h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br />sed
-            do eiusmod tempor incididunt ut labore et dolore .
+            Whether it's urgent or not, if you're facing a medical condition,
+             call for an ambulance to ensure timely and
+            appropriate care
           </p>
           <button type="button" class="btn btn-danger">
             <i class="fas fa-headset"></i> Call Emergency Needs
@@ -260,7 +332,7 @@
   </div>
 </section>
 
-<section class="about-ambulance-section">
+<!-- <section class="about-ambulance-section">
   <div class="container">
     <div class="row">
       <div class="about-img">
@@ -303,7 +375,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <app-download-app></app-download-app>
 <app-footer></app-footer>
