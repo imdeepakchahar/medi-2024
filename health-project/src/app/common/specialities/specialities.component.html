@@ -6,21 +6,24 @@
       what it is and we are very proud of achievement of our staff, We are all
       work together to help our all patients for recovery
     </p>
-    <div class="row">
-      <div class="col-md-3 col-sm-3 col-6" *ngFor="let s of sList">
+    
+    <div class="row read-more-section">
+      <div class="col-md-3 col-sm-3 col-6 read-more-card" *ngFor="let s of sList; let i = index" [style.display]="i < visibleCards ? 'block' : 'none'">
         <div class="specialities-box">
           <a [routerLink]="['/doctor-list']" [queryParams]="{ sid: s?.id }">
             <span *ngIf="s?.image != ''">
               <img [src]="s?.image | concatBase: 'specialities_image/'" alt="" />
             </span>
-            <!-- <span>
-              <img [src]="['./assets/images/consult-doctor.jpg']" alt="" />
-            </span> -->
             <h6>{{ s?.speciality_name }}</h6>
           </a>
         </div>
       </div>
     </div>
+    
+<div class="text-center ">
+  <button class="loadMoreBtn btn btn-danger  my-4" (click)="onLoadMore()" *ngIf="visibleCards < sList.length">Load more</button>
+
+</div>  
     <div class="row">
       <div class="col-sm-12 col-12">
         <a [routerLink]="['/doctor-list']" class="btn btn-primary float-end rounded-0">

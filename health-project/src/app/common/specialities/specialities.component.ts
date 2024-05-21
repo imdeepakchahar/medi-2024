@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../../services/Token/token-storage.service';
 import { ApiService } from '../../services/Api/api.service';
 import { Toaster } from 'ngx-toast-notifications';
+
 @Component({
   selector: 'app-specialities',
   templateUrl: './specialities.component.html',
@@ -12,23 +13,19 @@ export class SpecialitiesComponent implements OnInit {
     private tokenStorage: TokenStorageService,
     private ApiService: ApiService,
     private toaster: Toaster
-  ) {
-    this.isLoggedIn = !!this.tokenStorage.getToken();
-    if (this.isLoggedIn) {
-      this.myInfo = this.tokenStorage.getUser();
-    } else {
-    }
-  }
+  ) {}
 
   ngOnInit(): void {
     this.city = this.tokenStorage.getSession('city');
     this.getSpecialities();
   }
+
   isLoggedIn: boolean = false;
   myInfo: any = '';
   city: any;
   doctor_count: any = 0;
   sList: any = [];
+  visibleCards: number = 12;
 
   getSpecialities(): void {
     this.ApiService.getSpecialities(this.city).subscribe(
@@ -46,5 +43,9 @@ export class SpecialitiesComponent implements OnInit {
       },
       (err: any) => {}
     );
+  }
+
+  onLoadMore(): void {
+    this.visibleCards += 12; // Increase the number of visible cards by 12
   }
 }
